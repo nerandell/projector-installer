@@ -319,10 +319,6 @@ def unpack_app(file_path: str) -> str:
 def get_jre_dir(path_to_app: str) -> str:
     """Return path to dir with bundled jre"""
     product_info = get_product_info(path_to_app)
-
-    if is_android_studio(product_info):
-        return join(path_to_app, 'jre')
-
     return join(path_to_app, 'jbr')
 
 
